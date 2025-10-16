@@ -1,0 +1,20 @@
+footer {
+    background-color: #31C7D3;
+    position: fixed;    /* Fija el footer */
+    bottom: 0;          /* Pegado abajo */
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
