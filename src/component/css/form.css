@@ -1,98 +1,89 @@
-body {
-    background-color: #F0F0F0;
+/* Form.css */
+
+/* Contenedor del formulario */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-h1 {
-    font-size: 30px;
-    margin: 15px;
-    text-align: center;
+/* Título */
+h2 {
+  text-align: center;
+  color: #31C7D3;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 90%;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Cada campo */
+form div {
+  margin-bottom: 15px;
 }
 
-th {
-    background-color: #31C7D3;
-    color: white;
-    text-align: center;
-    padding: 10px;
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: 0.3s border-color;
 }
 
-tr:hover {
-    background-color: #f2f2f2;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+  border-color: #31C7D3;
+  outline: none;
 }
 
-/* Botones */
-.editar {
-    text-decoration: none;
-    color: white;
-    background-color: #31C7D3;
-    margin: auto 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block;
+/* Botón */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #31C7D3;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s background-color;
 }
 
-.eliminar {
-    color: white;
-    background-color: red;
-    margin: auto 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+button[type="submit"]:hover {
+  background-color: #31C7D3;
 }
 
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block; /* Cada fila se convierte en bloque */
-    }
+/* Responsive: en pantallas pequeñas */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
 
-    thead {
-        display: none; /* Ocultamos encabezados */
-    }
+  h2 {
+    font-size: 24px;
+  }
 
-    tr {
-        margin-bottom: 15px;
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    td::before {
-        content: attr(data-label); /* Mostramos el nombre de la columna */
-        position: absolute;
-        left: 10px;
-        width: calc(50% - 20px);
-        text-align: left;
-        font-weight: bold;
-    }
-
-    .editar, .eliminar {
-        margin: 5px 2px;
-        width: 45%;
-        display: inline-block;
-        text-align: center;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  button[type="submit"] {
+    font-size: 16px;
+  }
 }

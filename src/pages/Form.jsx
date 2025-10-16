@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React from 'react'
+import '../component/css/form.css'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import {  useNavigate, useParams } from 'react-router';
-import '../component/css/form.css';
+
 
 function FormEdit() {
 
